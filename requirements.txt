@@ -1,1 +1,6 @@
 Flask
+Jinja
+Flask-Login
+Flask-Mail
+Flask-SQLAlchemy
+
