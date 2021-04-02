@@ -6,8 +6,8 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route('/login', methods=["GET", "POST"] )
-def login():
+@app.route('/signin', methods=["GET", "POST"] )
+def signin():
     return render_template("login.html")
 
 @app.route('/signup', methods=["GET", "POST"] )
