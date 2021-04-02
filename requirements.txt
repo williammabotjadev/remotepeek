@@ -1,6 +1,7 @@
 Flask
 Jinja
 Flask-Login
+Flask-Bootstrap
 Flask-Mail
 Flask-SQLAlchemy
 
