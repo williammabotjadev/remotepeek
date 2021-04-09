@@ -1,29 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../static/images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Google Materalize fonts -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>RemotePeek</title>
-</head>
-<body>
-    <nav>
-        <div class="nav-wrapper" style="background-color: lightblue;">
-          <a href="#!" class="brand-logo center"><img class="responsive" style="height: 50px; padding: 1px" src="../static/images/Logo.png" alt="Logo"></a>
-          <ul class="left hide-on-med-and-down">
-            <li><a class="black-text" href="/signup">Sign Up</a></li>
-            <li><a class="black-text" href="/login">Login</a></li>
-            <li class="active"><a class="black-text" href="/demo">See it in Action!</a></li>
-          </ul>
-        </div>
-      </nav>
-    <h1>RemotePeek</h1>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+{% extends 'layout.html' %}
 
-</body>
-</html>
+{% block body %}
+  
+    <form class="form main-form" action="/register">
+      <h3>Register Today!</h3>
+      {{ form.csrf_token }}
+      <div class="firstname input-field">
+        {{ form.firstName }}
+      </div>
+      <div class="lastname input-field">
+        {{ form.lastName }}
+      </div>
+      <div class="email input-field">
+        {{ form.email }}
+      </div>
+      <div class="password  input-field ">
+        {{ form.password }}
+      </div>
+      <div class="btn-large">
+        Register
+      </div>
+      
+    </form>
+  {% endblock %}
+
