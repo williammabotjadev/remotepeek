@@ -6,21 +6,24 @@
       <h3>Register Today!</h3>
       {{ form.csrf_token }}
       <div class="firstname input-field">
-        {{ form.firstName }}
+        {{ form.firstName(placeholder="First Name") }}
       </div>
       <div class="lastname input-field">
-        {{ form.lastName }}
+        {{ form.lastName(placeholder="Last Name") }}
       </div>
       <div class="email input-field">
-        {{ form.email }}
+        {{ form.email(placeholder="Email Address") }}
       </div>
       <div class="password  input-field ">
-        {{ form.password }}
+        {{ form.password(placeholder="Password") }}
       </div>
       <div class="btn-large">
         Register
       </div>
       
     </form>
+    <div class="images-home">
+
+    </div>
   {% endblock %}
 
